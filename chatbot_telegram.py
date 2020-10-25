@@ -1,8 +1,8 @@
 # create bot in FatherBot from API Telegram
 import requests
+import settings
 
-
-TOKEN = '1270287398:AAG4_GtteWenSMEWtM-29Z-HtYHscjAlAvc'
+TOKEN = settings.TOKEN
 
 URL = 'https://api.telegram.org/bot{TOKEN}/{method}'
 
@@ -12,7 +12,8 @@ url = URL.format(TOKEN=TOKEN, method=updates)
 
 response = requests.get(url)
 
-print(response.text)
+print(type(response.text))
+
 
 
 
